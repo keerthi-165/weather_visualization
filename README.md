@@ -1,40 +1,61 @@
-# weather_visualization
-import requests
-import matplotlib.pyplot as plt
-import seaborn as sns
+NAME: Devarakonda Keerthi 
 
-cities = ['New York', 'London', 'Tokyo', 'Paris', 'Sydney', 'Mumbai']
-API_KEY = '6c3d7bfbf24d17cdac77cbc7916bcca'  # 🔑 Replace this with your actual API key
-BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
+COMPANY:CODETECH IT SOLUTIONS
 
-def get_temperature(city):
-    params = {
-        'q': city,
-        'appid': API_KEY,
-        'units': 'metric'
-    }
-    response = requests.get(BASE_URL, params=params)
-    data = response.json()
-    if response.status_code == 200:
-        return data['main']['temp']
-    else:
-        print(f"Failed to get data for {city}: {data.get('message', 'No message')}")
-        return None
+Intern ID:CT04WH94
 
-temperatures = []
-for city in cities:
-    temp = get_temperature(city)
-    if temp is not None:
-        temperatures.append(temp)
-    else:
-        temperatures.append(0)
+DOMAIN:python programming
 
-sns.set(style="whitegrid")
-plt.figure(figsize=(10, 6))
-sns.barplot(x=cities, y=temperatures, palette="coolwarm")
-plt.title("Current Temperature in Cities (°C)")
-plt.ylabel("Temperature (°C)")
-plt.xlabel("City")
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
+BATCH DURATION:12 march to 12 april 2025
+
+MENTOR:santhosh kumar
+
+Overview of the project.
+
+WEATHER
+
+This project demonstrates how to integrate a public API (OpenWeatherMap) with Python to fetch real-time weather data. It processes this data and visualizes it using Python libraries such as Matplotlib and Seaborn. The visualizations are then compiled into a dashboard that provides an interactive and insightful look into weather trends and patterns.
+
+Objectives
+
+API Integration: Fetch real-time weather data from the OpenWeatherMap API.
+
+Data Processing: Clean and structure the API data for visualization.
+
+Data Visualization: Use Matplotlib or Seaborn to create meaningful charts and graphs, such as temperature trends, humidity levels, and wind speed comparisons.
+
+Dashboard Creation: Assemble these visualizations into a comprehensive dashboard to present the findings.
+
+Deliverables
+
+Python Script: A script that fetches, processes, and visualizes the data.
+
+Visualization Dashboard: A dashboard featuring interactive and informative charts displaying weather-related insights.
+
+Technologies Used
+
+Python
+
+OpenWeatherMap API
+
+Matplotlib
+
+Seaborn
+
+Jupyter Notebook (if applicable)
+
+How to Run
+
+Clone the repository: git clone https://github.com/yourusername/repositoryname.git
+
+Install the necessary dependencies: pip install -r requirements.txt
+
+Run the Python script or Jupyter notebook to view the visualizations. Results
+
+The project provides visual insights into weather trends such as:
+
+Temperature variations over time
+
+Humidity and wind speed comparisons across different locations
+
+Data patterns that help in forecasting weather-related decisions.
